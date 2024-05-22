@@ -1,6 +1,6 @@
 <?php
 
-namespace StubModuleNamespace\StubClassNamePrefix\Tests;
+namespace StubModuleNamespace\StubClassNamePrefix\Tests\Feature;
 
 use Tests\TestCase;
 
