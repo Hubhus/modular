@@ -96,7 +96,7 @@ class StubClassNamePrefixServiceProvider extends ServiceProvider
     protected function registerMigrations(): void
     {
         $migrationsFolder = $this->modulePath('database/migrations');
-        if (file_exists($migrationsFolder)) {
+        if (file_exists($migrationsFolder) && $this->app->runningInConsole()) {
             $this->app->resolving(Migrator::class, function(Migrator $migrator) use ($migrationsFolder) {
                 $files = Finder::create()->in($migrationsFolder)->name('*.php')->files();
                 /** @var SplFileInfo $file */
