@@ -54,7 +54,7 @@ class StubClassNamePrefixServiceProvider extends ServiceProvider
         }
         $routesFolder = $this->modulePath('routes');
         if (file_exists($routesFolder)) {
-            $routeFiles = Finder::create()->in()->name('*.php')->files();
+            $routeFiles = Finder::create()->in($routesFolder)->name('*.php')->files();
             /** @var \Symfony\Component\Finder\SplFileInfo $routeFile */
             foreach ($routeFiles as $routeFile) {
                 require $routeFile->getRealPath();
