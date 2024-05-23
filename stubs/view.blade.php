@@ -1,1 +1,1 @@
-<!--Sample view: StubModuleNameSingular.sample -->
+<!--Sample view: StubModuleNameSingular::sample -->
